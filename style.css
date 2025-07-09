@@ -1,0 +1,323 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #222;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 05px 18px;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+    .btn:hover {
+        background: #06eeff;
+        color: #000;
+        
+    }
+
+
+.hero {
+    position: relative;
+    background: url('hero.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    
+}
+    .hero h1 {
+        margin-right: 600px;
+        font-size: 3rem;
+        font-family: 'TheSeasons';
+        text-align: center;
+        font-weight: normal;
+        color: #2600ff;
+        text-shadow: #06eeff;
+        font-weight: bold;
+    }
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0601ff;
+    padding: 0px 100px;
+    margin-left: 50px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .nav-links li a {
+        color: #000;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 8px 10px;
+        transition: color 0.3s;
+    }
+
+        .nav-links li a:hover {
+            color: #0acdf0;
+        }
+
+
+    .nav-links .buy-btn {
+        background-color: #0505ea;
+        color: rgb(255, 255, 255);
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        display: inline-block;
+        text-align: center;
+        line-height: 1;
+        
+    }
+.buy-btn {
+    margin-right: 100px;
+}
+
+
+.what-we-do {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.content-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.left {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+    .left h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 42px;
+        margin-top: 20px;
+    }
+
+.right {
+    flex: 2;
+    min-width: 300px;
+}
+
+    .right p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;
+    }
+
+@media (max-width: 768px) {
+    .content-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .left,
+    .right {
+        max-width: 100%;
+    }
+
+        .left h2 {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .right p {
+            text-align: center;
+        }
+}
+
+
+.countdown-section {
+  padding: 90px 40px;
+  background: url('countdown.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.countdown div {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.countdown-section .btn {
+    background-color: #fff;
+    color: #000;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.countdown-section .btn:hover {
+    background-color: #0bd1e7;
+}
+
+.cta-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 160px;
+  background: #f6f6f6;
+  gap: 30px;
+  justify-content: center;
+}
+
+.cta {
+  flex: 1;
+  min-width: 300px;
+  padding: 30px;
+  border-radius: 0px;
+}
+
+    .cta.red {
+        background-color: #20216b;
+        color: #fff;
+       
+    }
+
+.cta.yellow {
+  background-color: #001ee1;
+  color: #000;
+}
+    .cta .btn {
+        background-color: #fff; 
+        color: #000;
+        padding: 8px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+        .cta .btn:hover {
+            background-color: #0bd1e7;
+        }
+
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        h1 {
+    font-size: 32px; 
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+}
+
+.btn .arrow {
+    margin-left: 10px;
+    font-size: 20px; 
+    font-weight: bold; 
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.btn:hover .arrow {
+    transform: translateX(6px); 
+    color: #0bd1e7;
+}
+
+footer {
+  background: #111;
+  color: #fff;
+  padding: 30px 0px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+footer a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+footer a:hover {
+  color: #0bd1e7;
+}
+
+footer p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
