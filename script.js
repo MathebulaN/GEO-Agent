@@ -1,5 +1,5 @@
 ﻿// Set a future date for countdown (example: Dec 31, 2025)
-const targetDate = new Date("july 11, 2025 23:59:59").getTime();
+const targetDate = new Date("july 31, 2025 23:59:59").getTime();
 
 const updateCountdown = () => {
   const now = new Date().getTime();
