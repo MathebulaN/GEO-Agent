@@ -4,8 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI GEO Agent | Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Open Sans', sans-serif;
       margin: 0;
@@ -16,15 +21,15 @@
 
     header {
       background-color: #fff;
-      padding: 20px 40px;
+      padding: 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       position: sticky;
       top: 0;
       z-index: 1000;
-      flex-wrap: wrap;
     }
 
     .logo {
@@ -33,13 +38,12 @@
       font-family: 'Playfair Display', serif;
       font-weight: bold;
       font-size: 22px;
-      margin-left: 30px;
     }
 
     .logo img {
       width: 35px;
-      margin-right: 5px;
-      border-radius: 500px;
+      margin-right: 10px;
+      border-radius: 100%;
     }
 
     nav ul {
@@ -64,7 +68,7 @@
 
     nav a.btn {
       background-color: #131de4;
-      color: black;
+      color: #fff;
       padding: 8px 15px;
       border-radius: 5px;
       font-weight: bold;
@@ -101,8 +105,7 @@
     }
 
     .service-columns > div {
-      flex: 1;
-      min-width: 300px;
+      flex: 1 1 300px;
       background: #f9f9f9;
       padding: 25px;
       border-radius: 10px;
@@ -112,6 +115,7 @@
     h3 {
       margin-bottom: 15px;
       color: #09023e;
+      font-size: 20px;
     }
 
     ul {
@@ -131,113 +135,89 @@
 
     .btn-contact:hover {
       background: #0bd1e7;
+      color: #000;
     }
 
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    footer a:hover {
+      color: #0bd1e7;
+    }
+
+    footer p {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
-      nav ul {
+      header {
         flex-direction: column;
         align-items: flex-start;
+        gap: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding-top: 10px;
       }
 
       .service-columns {
         flex-direction: column;
         gap: 20px;
       }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+
+      .btn-contact {
+        width: 100%;
+        text-align: center;
+      }
     }
-    footer {
-  background: #111;
-  color: #fff;
-  padding: 30px 20px;
-  text-align: center;
-  margin-top: 60px;
-}
 
-footer a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
-  font-size: 18px;
-}
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 18px;
+      }
 
-footer a:hover {
-  color: #0bd1e7;
-}
+      .logo img {
+        width: 30px;
+      }
 
-footer p {
-  font-size: 14px;
-  margin-top: 10px;
-}
-/* Make the about-section stack on small screens */
-@media (max-width: 768px) {
-  .about-section {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+      nav a.btn {
+        padding: 6px 12px;
+        font-size: 14px;
+      }
 
-  .image-placeholder {
-    height: 200px;
-  }
+      footer a {
+        font-size: 16px;
+      }
 
-  .about-text h2 {
-    font-size: 1.5rem;
-  }
-}
-
-/* Make stat boxes stack or fit nicely */
-@media (max-width: 768px) {
-  .stat-box {
-    flex: 1 1 45%;
-  }
-}
-
-@media (max-width: 480px) {
-  .stat-box {
-    flex: 1 1 100%;
-  }
-
-  .stat-box h3 {
-    font-size: 1.25rem;
-  }
-
-  .stat-box p {
-    font-size: 0.95rem;
-  }
-}
-
-/* Stack footer boxes on mobile */
-@media (max-width: 768px) {
-  .footer-boxes {
-    flex-direction: column;
-  }
-
-  .footer-box {
-    margin-bottom: 20px;
-  }
-}
-
-/* Responsive logo and nav */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  nav ul {
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  nav ul li {
-    flex: 1 1 100%;
-  }
-
-  .btn {
-    margin-top: 10px;
-  }
-}
-
-
+      footer p {
+        font-size: 13px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -257,7 +237,6 @@ footer p {
         <li><a href="contact.html" class="btn">Get Started</a></li>
       </ul>
     </nav>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   </header>
 
   <div class="container">
@@ -267,58 +246,50 @@ footer p {
     </p>
 
     <div class="service-columns">
-
       <div>
         <h3>AI Visibility Optimization</h3>
         <p>We help you get discovered by AI engines like Siri, Alexa, Google Assistant, and Bing AI. This includes structured data markup, voice-search tagging, and smart listings setup.</p>
       </div>
-
       <div>
         <h3>Geo-Targeting & Local SEO</h3>
         <p>We make sure your business is accurately pinned, ranked, and highlighted in geo-based services such as Google Maps, Apple Maps, and other local search platforms.</p>
       </div>
-
     </div>
 
     <div class="service-columns">
-
       <div>
         <h3>Smart Directory Integration</h3>
         <p>Get listed on AI-preferred directories, business data aggregators, and platforms used by modern digital assistants for recommendations and results.</p>
       </div>
-
       <div>
         <h3>AI-Friendly Content Strategy</h3>
         <p>We structure your website and business content in a way that AI understands with semantic markup, entity recognition, and enhanced data structures.</p>
       </div>
-
     </div>
 
     <div class="service-columns">
-
       <div>
         <h3>AI Reputation Management</h3>
         <p>We monitor your digital footprint and make adjustments to ensure that AI and voice search results represent your brand accurately and positively.</p>
       </div>
-
       <div>
         <h3>Business Intelligence Reports</h3>
         <p>Receive detailed reports on how visible your business is to AI systems, which platforms are indexing you, and how to boost your presence further.</p>
       </div>
-
     </div>
 
     <a href="contact.html" class="btn-contact">Contact Us To Get Started</a>
   </div>
-<footer style="background:#111; color:#fff; padding:30px 20px; text-align:center; margin-top:60px;">
+
+  <footer>
     <div style="margin-bottom:15px;">
-        <a href="https://facebook.com/nyiko.lungi" target="_blank" style="margin: 0 10px; color: #fff;"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com/smosh_melech" target="_blank" style="margin: 0 10px; color: #fff;"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com/smosh_melech" target="_blank" style="margin: 0 10px; color: #fff;"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/https://www.linkedin.com/in/nyiko-mathebula-b479b9279" target="_blank" style="margin: 0 10px; color: #fff;"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://facebook.com/nyiko.lungi" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/smosh_melech" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/smosh_melech" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/nyiko-mathebula-b479b9279" target="_blank"><i class="fab fa-linkedin-in"></i></a>
     </div>
-    <p style="font-size: 14px;">&copy; 2025 AI GEO Agent. All rights reserved. <br>Powered by <strong>Nyiko Mathebula</strong></p>
-</footer>
+    <p>&copy; 2025 AI GEO Agent. All rights reserved.<br>Powered by <strong>Nyiko Mathebula</strong></p>
+  </footer>
 
 </body>
 </html>
