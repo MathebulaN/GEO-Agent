@@ -1,11 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI GEO Agent | How It Works</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Open Sans', sans-serif;
       margin: 0;
@@ -16,10 +21,11 @@
 
     header {
       background-color: #fff;
-      padding: 20px 40px;
+      padding: 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       position: sticky;
       top: 0;
@@ -32,13 +38,12 @@
       font-family: 'Playfair Display', serif;
       font-weight: bold;
       font-size: 22px;
-      margin-left: 30px;
     }
 
     .logo img {
       width: 35px;
       margin-right: 10px;
-      border-radius: 500px;
+      border-radius: 100%;
     }
 
     nav ul {
@@ -47,6 +52,7 @@
       gap: 25px;
       margin: 0;
       padding: 0;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -62,7 +68,7 @@
 
     nav a.btn {
       background-color: #1111e7;
-      color: rgb(255, 255, 255);
+      color: #fff;
       padding: 8px 15px;
       border-radius: 5px;
       font-weight: bold;
@@ -80,6 +86,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
     }
 
     .hero h1 {
@@ -87,163 +94,147 @@
       color: white;
       font-size: 48px;
       text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
-      margin-right: 850px;
+      margin: 0;
     }
 
     .steps {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-      padding: 60px 40px;
+      padding: 60px 20px;
       gap: 30px;
     }
 
     .step {
-      flex: 1;
-      min-width: 250px;
+      flex: 1 1 280px;
       max-width: 300px;
       text-align: center;
     }
 
-    .step-placeholder1 {
-      background: url('step1.png') center center / cover no-repeat;
+    .step-placeholder1,
+    .step-placeholder2,
+    .step-placeholder3 {
       height: 180px;
       width: 100%;
+      background-size: cover;
+      background-position: center;
       margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .step-placeholder1 {
+      background-image: url('step1.png');
     }
 
     .step-placeholder2 {
-      background: url('step2.png') center center / cover no-repeat;
-      height: 180px;
-      width: 100%;
-      margin-bottom: 20px;
+      background-image: url('step2.png');
     }
 
     .step-placeholder3 {
-      background: url('step3.png') center center / cover no-repeat;
-      height: 180px;
-      width: 100%;
-      margin-bottom: 20px;
+      background-image: url('step3.png');
     }
 
     .step h3 {
-      margin-bottom: 10px;
       font-size: 20px;
+      margin-bottom: 10px;
     }
 
     .step p {
       color: #333;
-      line-height: 1.4;
+      line-height: 1.5;
+      font-size: 15px;
     }
 
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    footer a:hover {
+      color: #0bd1e7;
+    }
+
+    footer p {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .hero {
+        height: 200px;
+        padding: 20px;
+      }
+
       .hero h1 {
-        font-size: 36px;
+        font-size: 32px;
       }
 
       .steps {
-        flex-direction: column;
-        align-items: center;
+        padding: 40px 15px;
       }
 
       .step {
-        max-width: 90%;
+        max-width: 100%;
       }
     }
-    footer {
-  background: #111;
-  color: #fff;
-  padding: 30px 20px;
-  text-align: center;
-  margin-top: 60px;
-}
 
-footer a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
-  font-size: 18px;
-}
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 18px;
+      }
 
-footer a:hover {
-  color: #0bd1e7;
-}
+      .logo img {
+        width: 30px;
+      }
 
-footer p {
-  font-size: 14px;
-  margin-top: 10px;
-}
-/* Make the about-section stack on small screens */
-@media (max-width: 768px) {
-  .about-section {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+      nav a.btn {
+        padding: 6px 12px;
+        font-size: 14px;
+      }
 
-  .image-placeholder {
-    height: 200px;
-  }
+      .hero h1 {
+        font-size: 26px;
+      }
 
-  .about-text h2 {
-    font-size: 1.5rem;
-  }
-}
+      .step h3 {
+        font-size: 18px;
+      }
 
-/* Make stat boxes stack or fit nicely */
-@media (max-width: 768px) {
-  .stat-box {
-    flex: 1 1 45%;
-  }
-}
+      .step p {
+        font-size: 14px;
+      }
 
-@media (max-width: 480px) {
-  .stat-box {
-    flex: 1 1 100%;
-  }
+      footer a {
+        font-size: 16px;
+      }
 
-  .stat-box h3 {
-    font-size: 1.25rem;
-  }
-
-  .stat-box p {
-    font-size: 0.95rem;
-  }
-}
-
-/* Stack footer boxes on mobile */
-@media (max-width: 768px) {
-  .footer-boxes {
-    flex-direction: column;
-  }
-
-  .footer-box {
-    margin-bottom: 20px;
-  }
-}
-
-/* Responsive logo and nav */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  nav ul {
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  nav ul li {
-    flex: 1 1 100%;
-  }
-
-  .btn {
-    margin-top: 10px;
-  }
-}
-
-
+      footer p {
+        font-size: 13px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -263,8 +254,6 @@ footer p {
         <li><a href="contact.html" class="btn">Get Started</a></li>
       </ul>
     </nav>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   </header>
 
   <div class="hero">
@@ -272,7 +261,6 @@ footer p {
   </div>
 
   <section class="steps">
-
     <div class="step">
       <div class="step-placeholder1"></div>
       <h3>Step 1: Optimize</h3>
@@ -290,17 +278,17 @@ footer p {
       <h3>Step 3: Be Discovered</h3>
       <p>Your business becomes more visible to algorithms and intelligent systems, gaining you more traffic, better recognition, and future-ready relevance.</p>
     </div>
-
   </section>
-<footer style="background:#111; color:#fff; padding:30px 20px; text-align:center; margin-top:60px;">
+
+  <footer>
     <div style="margin-bottom:15px;">
-        <a href="https://facebook.com/nyiko.lungi" target="_blank" style="margin: 0 10px; color: #fff;"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com/smosh_melech" target="_blank" style="margin: 0 10px; color: #fff;"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com/smosh_melech" target="_blank" style="margin: 0 10px; color: #fff;"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/https://www.linkedin.com/in/nyiko-mathebula-b479b9279" target="_blank" style="margin: 0 10px; color: #fff;"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://facebook.com/nyiko.lungi" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/smosh_melech" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/smosh_melech" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/nyiko-mathebula-b479b9279" target="_blank"><i class="fab fa-linkedin-in"></i></a>
     </div>
-    <p style="font-size: 14px;">&copy; 2025 AI GEO Agent. All rights reserved. <br>Powered by <strong>Nyiko Mathebula</strong></p>
-</footer>
+    <p>&copy; 2025 AI GEO Agent. All rights reserved.<br>Powered by <strong>Nyiko Mathebula</strong></p>
+  </footer>
 
 </body>
 </html>
