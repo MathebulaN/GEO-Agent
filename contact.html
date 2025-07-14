@@ -1,264 +1,231 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WIBA | Contact Us</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #fff;
-            color: #000;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI GEO Agent| Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        header {
-            background-color: #fff;
-            padding: 20px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #000;
+    }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            font-family: 'Playfair Display', serif;
-            font-weight: bold;
-            font-size: 22px;
-        }
+    header {
+      background-color: #fff;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-            .logo img {
-                width: 35px;
-                margin-right: 10px;
-                border-radius: 500px;
-            }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: bold;
+      font-size: 22px;
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-            margin: 0;
-            padding: 0;
-        }
+    .logo img {
+      width: 35px;
+      margin-right: 10px;
+      border-radius: 100%;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #000;
-            font-weight: 500;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
 
-            nav a.highlight {
-                border-bottom: 3px solid #0bd1e7;
-                padding-bottom: 5px;
-            }
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
 
-            nav a.btn {
-                background-color: #0307e6;
-                color: rgb(255, 255, 255);
-                padding: 8px 15px;
-                border-radius: 5px;
-                font-weight: bold;
-            }
+    nav a.highlight {
+      border-bottom: 3px solid #0bd1e7;
+      padding-bottom: 5px;
+    }
 
-                nav a.btn:hover {
-                    background: #0bd1e7;
-                }
+    nav a.btn {
+      background-color: #0307e6;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
 
-        .container {
-            max-width: 1100px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
+    nav a.btn:hover {
+      background: #0bd1e7;
+      color: #000;
+    }
 
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
 
-        form {
-            max-width: 600px;
-            margin-top: 30px;
-        }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
 
-        label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
+    p {
+      margin-bottom: 30px;
+      color: #ffffff;
+    }
 
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
+    form {
+      max-width: 100%;
+    }
 
-        button {
-            background: #0c1dda;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
 
-            button:hover {
-                background: #0bd1e7;
-            }
-            footer {
-  background: #111;
-  color: #fff;
-  padding: 30px 20px;
-  text-align: center;
-  margin-top: 60px;
-}
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
 
-footer a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
-  font-size: 18px;
-}
+    button {
+      background: #0c1dda;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
 
-footer a:hover {
-  color: #0bd1e7;
-}
+    button:hover {
+      background: #0bd1e7;
+      color: #000;
+    }
 
-footer p {
-  font-size: 14px;
-  margin-top: 10px;
-}
-/* Make the about-section stack on small screens */
-@media (max-width: 768px) {
-  .about-section {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
 
-  .image-placeholder {
-    height: 200px;
-  }
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 18px;
+    }
 
-  .about-text h2 {
-    font-size: 1.5rem;
-  }
-}
+    footer a:hover {
+      color: #0bd1e7;
+    }
 
-/* Make stat boxes stack or fit nicely */
-@media (max-width: 768px) {
-  .stat-box {
-    flex: 1 1 45%;
-  }
-}
+    footer p {
+      font-size: 14px;
+      margin-top: 10px;
+    }
 
-@media (max-width: 480px) {
-  .stat-box {
-    flex: 1 1 100%;
-  }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
 
-  .stat-box h3 {
-    font-size: 1.25rem;
-  }
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
 
-  .stat-box p {
-    font-size: 0.95rem;
-  }
-}
+      .container {
+        padding: 0 15px;
+      }
 
-/* Stack footer boxes on mobile */
-@media (max-width: 768px) {
-  .footer-boxes {
-    flex-direction: column;
-  }
+      h1 {
+        font-size: 26px;
+      }
 
-  .footer-box {
-    margin-bottom: 20px;
-  }
-}
-
-/* Responsive logo and nav */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  nav ul {
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  nav ul li {
-    flex: 1 1 100%;
-  }
-
-  .btn {
-    margin-top: 10px;
-  }
-}
-
-
-    </style>
+      button {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo"> WiBA
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Nominations</a></li>
-                <li><a href="how-it-work.html">How To Vote</a></li>
-                <li><a class="highlight" href="contact.html">Contact Us</a></li>
-                <li><a href="contact.html" class="btn">Get Started </a></li>
-            </ul>
-        </nav>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    </header>
-
-    <div class="container">
-        <h1>Contact Us</h1>
-        <p>If you have questions or need help, please reach out using the form below:</p>
-
-        <form action="mailto:smoshmelech@icloud.com" method="POST" enctype="text/plain">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="Name" placeholder="Your Name" required>
-
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="Email" placeholder="Email Address" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="Message" rows="5" placeholder="Write Your Message" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo"> AI GEO Agent
     </div>
-<footer style="background:#111; color:#fff; padding:30px 20px; text-align:center; margin-top:60px;">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="how-it-work.html">How To Vote</a></li>
+        <li><a class="highlight" href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html" class="btn">Get Started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>If you have questions or need help, please reach out using the form below:</p>
+
+    <form action="mailto:smoshmelech@icloud.com" method="POST" enctype="text/plain">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="Name" placeholder="Your Name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="Email" placeholder="Email Address" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="Message" rows="5" placeholder="Write your message..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
     <div style="margin-bottom:15px;">
-        <a href="https://facebook.com/nyiko.lungi" target="_blank" style="margin: 0 10px; color: #fff;"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com/smosh_melech" target="_blank" style="margin: 0 10px; color: #fff;"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com/smosh_melech" target="_blank" style="margin: 0 10px; color: #fff;"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/https://www.linkedin.com/in/nyiko-mathebula-b479b9279" target="_blank" style="margin: 0 10px; color: #fff;"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://facebook.com/nyiko.lungi" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/smosh_melech" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/smosh_melech" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/nyiko-mathebula-b479b9279" target="_blank"><i class="fab fa-linkedin-in"></i></a>
     </div>
-    <p style="font-size: 14px;">&copy; 2025 AI GEO Agent. All rights reserved. <br>Powered by <strong>Nyiko Mathebula</strong></p>
-</footer>
+    <p>&copy; 2025 WiBA. All rights reserved. <br>Powered by <strong>Nyiko Mathebula</strong></p>
+  </footer>
 
 </body>
 </html>
